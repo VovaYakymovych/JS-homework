@@ -102,22 +102,62 @@ let list = [2,17,13,6,22,31,45,66,100,-18];
 // console.log(list)
 
 //9.
-console.log('========9.=======');
-let i = list.length-1;
-while(i>=0){
-    let item = list[i]
-    console.log(item)
-    i--
-}
-console.log('======')
-for (let i=list.length-1; i>=0; i--) {
-    let item = list[i]
-    console.log(item)
-}
+// console.log('========9.1=======');
+// let i = list.length-1;
+// while(i>=0){
+//     let item = list[i]
+//     console.log(item)
+//     i--
+// }
 
-console.log('=====')
-while(i<list.length){
-    let item = list[i]
-    console.log(i, item)
-    i +=2
-}
+
+// console.log('========9.2=======');
+// console.log('======')
+// for (let i=list.length-1; i>=0; i--) {
+//     let item = list[i]
+//     console.log(item)
+// }
+
+
+// console.log('========9.3=======');
+// let i = list.length-1;
+//
+// console.log('=====')
+// while(i>=0){
+//     let item = list[i]
+//     console.log(i, item)
+//     i -=2
+// }
+
+// console.log('========9.4=======');
+// for (let i=list.length-1; i>=0; i-=2) {
+//     let item = list[i]
+//     console.log(i, item)
+// }
+
+
+// console.log('========9.7=======');
+// for (let i=list.length-1; i>=0; i--) {
+//   let item = list[i]
+//   if (item % 3 === 0) {
+//     item = 'okten'
+//   }
+//   console.log(i, item)
+// }
+
+
+
+// ================================task-#yHAwJOyiC====================================
+
+// let num =[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// for (let number of num) {
+//   console.log(number)
+// }
+
+// ================================task-#GamKju89ob====================================
+
+// let str = ['a','b','c','d','e','f','g','h','i','j']
+//
+// for (let string of str) {
+//   console.log(string)
+// }
