@@ -161,3 +161,29 @@ let list = [2,17,13,6,22,31,45,66,100,-18];
 // for (let string of str) {
 //   console.log(string)
 // }
+
+// ================================task-#Bm76xmgb====================================
+
+
+// let lst = [true, 3, 'a', false, 123, 65, 'qwe', 'asd']
+//
+// for (let lstElement of lst) {
+//     console.log(lstElement)
+// }
+
+
+// ================================task-#Bm76xmgb====================================
+
+
+let lst = [true, 3, 'a', false, 123, 65, 'qwe', 'asd', true, 1]
+
+let i = 0;
+let lstItem = lst[i];
+
+if (typeof(i) === "number"){
+    console.log(i)
+}
+
+
+
+
