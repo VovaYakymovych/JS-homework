@@ -109,3 +109,137 @@
 // ==================================task #bolvdlhP======================================
 
 
+// let suits = ['spade', 'diamond', 'heart', 'clubs']
+// let values = [6, 7, 8, 9, 10, 'J', 'Q', 'K', 'A']
+// let colors = ['red', 'black']
+//
+//
+// let deck = []
+// for (const suit of suits) {
+//     for (const value of values) {
+//         const card = {cardSuit: suit, value: value}
+//         if (suit === 'spade' || suit === 'clubs'){
+//             card.color = 'black'
+//         }
+//         else{
+//             card.color = 'red'
+//         }
+//         deck.push(card)
+//     }
+// }
+//
+// function cardFinder(deck, callback) {
+//     return deck.filter(callback)
+// }
+// console.log('Піковий туз')
+// console.log(cardFinder(deck, card => card.value === 'A' && card.cardSuit === 'spade'))
+//
+// console.log('всі шістки')
+// console.log(cardFinder(deck, card => card.value === 6))
+//
+// console.log('всі червоні')
+// console.log(cardFinder(deck, card => card.color === 'red'))
+//
+// console.log('всі піки')
+// console.log(cardFinder(deck, card => card.cardSuit === 'diamond'))
+//
+// console.log('всі хрести більші за 9')
+// console.log(cardFinder(deck, card => card.cardSuit === 'clubs' && (typeof card.value === 'number' ? card.value > 9 : true)))
+
+
+// ==================================task #EP5I1UUzAX======================================
+
+
+// let suits = ['spade', 'diamond', 'heart', 'clubs']
+// let values = [6, 7, 8, 9, 10, 'J', 'Q', 'K', 'A']
+// let colors = ['red', 'black']
+//
+//
+// let deck = []
+// for (const suit of suits) {
+//     for (const value of values) {
+//         const card = {cardSuit: suit, value: value}
+//         if (suit === 'spade' || suit === 'clubs'){
+//             card.color = 'black'
+//         }
+//         else{
+//             card.color = 'red'
+//         }
+//         deck.push(card)
+//     }
+// }
+//
+// console.log(deck.reduce((accumulator, card) => {
+//     if (card.cardSuit === 'spade'){
+//         accumulator.spades.push(card)
+//     }
+//     else if (card.cardSuit === 'diamond'){
+//         accumulator.diamonds.push(card)
+//     }
+//     else if (card.cardSuit === 'heart'){
+//         accumulator.hearts.push(card)
+//     }
+//     else if (card.cardSuit === 'clubs'){
+//         accumulator.clubs.push(card)
+//     }
+//     return accumulator
+// }, {spades: [], diamonds: [], hearts: [], clubs: []}))
+
+
+// ==================================task #4LJn7zBx======================================
+
+
+// let coursesArray = [
+//     {
+//         title: 'JavaScript Complex',
+//         monthDuration: 5,
+//         hourDuration: 909,
+//         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js']
+//     },
+//     {
+//         title: 'Java Complex',
+//         monthDuration: 6,
+//         hourDuration: 909,
+//         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'angular', 'aws', 'docker', 'git', 'java core', 'java advanced']
+//     },
+//     {
+//         title: 'Python Complex',
+//         monthDuration: 6,
+//         hourDuration: 909,
+//         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'angular', 'aws', 'docker', 'python core', 'python advanced']
+//     },
+//     {
+//         title: 'QA Complex',
+//         monthDuration: 4,
+//         hourDuration: 909,
+//         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'git', 'QA/QC']
+//     },
+//     {
+//         title: 'FullStack',
+//         monthDuration: 7,
+//         hourDuration: 909,
+//         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js', 'python', 'java']
+//     },
+//     {
+//         title: 'Frontend',
+//         monthDuration: 4,
+//         hourDuration: 909,
+//         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
+//     }
+// ];
+//
+// function courseFinder(list,callback){
+//     return list.filter(callback)
+// }
+//
+// console.log(courseFinder(coursesArray, course => {
+//     if (course.modules.includes('sass')){
+//         return course
+//     }
+// }));
+//
+// console.log(courseFinder(coursesArray, course => {
+//     if (course.modules.includes('docker')){
+//         return course
+//     }
+// }));
