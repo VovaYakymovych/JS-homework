@@ -228,18 +228,15 @@
 //     }
 // ];
 //
-// function courseFinder(list,callback){
-//     return list.filter(callback)
+// function courseFinder(array, callback) {
+//     let filterArr = [];
+//     for (const item of array) {
+//         if (callback(item)) {
+//             filterArr.push(item);
+//         }
+//     }
+//     return filterArr;
 // }
 //
-// console.log(courseFinder(coursesArray, course => {
-//     if (course.modules.includes('sass')){
-//         return course
-//     }
-// }));
-//
-// console.log(courseFinder(coursesArray, course => {
-//     if (course.modules.includes('docker')){
-//         return course
-//     }
-// }));
+// console.log(courseFinder(coursesArray, (item)=>item.modules.includes('sass')))
+// console.log(courseFinder(coursesArray, (item)=>item.modules.includes('docker')))
