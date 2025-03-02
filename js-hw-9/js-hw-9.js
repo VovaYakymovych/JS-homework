@@ -17,7 +17,7 @@ block.style.margin = '20px auto'
 document.body.appendChild(block)
 
 
-let clonedBlock = block.cloneNode()
+let clonedBlock = block.cloneNode(true)
 document.body.appendChild(clonedBlock)
 
 
