@@ -9,10 +9,10 @@
 // let btn = document.createElement('button')
 // btn.classList.add('buttonTask1')
 // btn.innerText = 'text delete'
-// document.body.append(text,btn)
+// document.body.append(text, btn)
 //
-// btn.onclick = function (){
-//     document.getElementById('text').remove()
+// btn.onclick = function () {
+//   document.getElementById('text').remove()
 // }
 
 
@@ -23,7 +23,7 @@
 // let inputAge = document.createElement('input')
 // let formButton = document.createElement('button')
 //
-// formAge.append(inputAge,formButton)
+// formAge.append(inputAge, formButton)
 // document.body.appendChild(formAge)
 //
 // formAge.id = 'formAge'
@@ -35,26 +35,25 @@
 // inputAge.placeholder = 'Enter your age'
 // formButton.innerText = 'Submit'
 //
-// formAge.onsubmit = function(ev){
-//     ev.preventDefault()
+// formAge.onsubmit = function (ev) {
+//   ev.preventDefault()
 //
-//     let age = document.getElementById('formInputAge').value
+//   let age = document.getElementById('formInputAge').value
 //
-//     let existingWarning = document.getElementById('ageWarning');
-//     if (existingWarning) {
-//         existingWarning.remove();
-//     }
+//   let existingWarning = document.getElementById('ageWarning');
+//   if (existingWarning) {
+//     existingWarning.remove();
+//   }
 //
-//     let warning = document.createElement('p')
-//     warning.id = 'ageWarning'
-//     document.body.appendChild(warning)
+//   let warning = document.createElement('p')
+//   warning.id = 'ageWarning'
+//   document.body.appendChild(warning)
 //
-//     if (age === '') {
-//         warning.textContent = 'Enter your age'
-//     }
-//     else if(age < 18){
-//         warning.textContent = 'Your age is below 18'
-//     }
+//   if (age === '') {
+//     warning.textContent = 'Enter your age'
+//   } else if (age < 18) {
+//     warning.textContent = 'Your age is below 18'
+//   }
 // }
 
 
@@ -67,7 +66,7 @@
 // let userAge = document.createElement('input')
 // let formUserButton = document.createElement('button')
 //
-// formUser.append(userName,userSurname,userAge,formUserButton)
+// formUser.append(userName, userSurname, userAge, formUserButton)
 // document.body.appendChild(formUser)
 //
 // formUser.id = 'formUser'
@@ -78,7 +77,7 @@
 // formUserButton.classList.add('formButton')
 //
 // document.querySelectorAll("input").forEach(input => {
-//     input.classList.add("formInput");
+//   input.classList.add("formInput");
 // });
 //
 // userName.placeholder = 'Enter your name'
@@ -86,23 +85,23 @@
 // userAge.placeholder = 'Enter your age'
 // formUserButton.innerText = 'Submit'
 //
-// formUser.onsubmit = function (ev){
-//     ev.preventDefault()
+// formUser.onsubmit = function (ev) {
+//   ev.preventDefault()
 //
-//     let user = {
-//         name: document.getElementById('formUserName').value,
-//         surname: document.getElementById('formUserSurname').value,
-//         age: document.getElementById('formUserAge').value
-//     };
+//   let user = {
+//     name: document.getElementById('formUserName').value,
+//     surname: document.getElementById('formUserSurname').value,
+//     age: document.getElementById('formUserAge').value
+//   };
 //
-//     let userDataBlock = document.createElement('div');
-//     userDataBlock.id = 'userDataBlock';
+//   let userDataBlock = document.createElement('div');
+//   userDataBlock.id = 'userDataBlock';
 //
-//     userDataBlock.innerHTML = `
+//   userDataBlock.innerHTML = `
 //         <p>Name: ${user.name || 'None'}</p>
 //         <p>Surname: ${user.surname || 'None'}</p>
 //         <p>Age: ${user.age || 'None'}</p>
 //     `;
 //
-//     document.body.appendChild(userDataBlock);
+//   document.body.appendChild(userDataBlock);
 // }
