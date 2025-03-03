@@ -26,9 +26,11 @@
 // formAge.append(inputAge,formButton)
 // document.body.appendChild(formAge)
 //
-// inputAge.id = 'formInput'
+// formAge.id = 'formAge'
+// inputAge.id = 'formInputAge'
 // inputAge.type = 'number'
-// formButton.id = 'formButton'
+// inputAge.classList.add('formInput')
+// formButton.classList.add('formButton')
 //
 // inputAge.placeholder = 'Enter your age'
 // formButton.innerText = 'Submit'
@@ -36,7 +38,7 @@
 // formAge.onsubmit = function(ev){
 //     ev.preventDefault()
 //
-//     let age = document.getElementById('formInput').value
+//     let age = document.getElementById('formInputAge').value
 //
 //     let existingWarning = document.getElementById('ageWarning');
 //     if (existingWarning) {
@@ -56,4 +58,51 @@
 // }
 
 
-// ==================================task #j693ca8======================================
+// ==================================task #ymAmN2xJ======================================
+
+
+// let formUser = document.createElement('form')
+// let userName = document.createElement('input')
+// let userSurname = document.createElement('input')
+// let userAge = document.createElement('input')
+// let formUserButton = document.createElement('button')
+//
+// formUser.append(userName,userSurname,userAge,formUserButton)
+// document.body.appendChild(formUser)
+//
+// formUser.id = 'formUser'
+// userName.id = 'formUserName'
+// userSurname.id = 'formUserSurname'
+// userAge.id = 'formUserAge'
+// userAge.type = 'number'
+// formUserButton.classList.add('formButton')
+//
+// document.querySelectorAll("input").forEach(input => {
+//     input.classList.add("formInput");
+// });
+//
+// userName.placeholder = 'Enter your name'
+// userSurname.placeholder = 'Enter your surname'
+// userAge.placeholder = 'Enter your age'
+// formUserButton.innerText = 'Submit'
+//
+// formUser.onsubmit = function (ev){
+//     ev.preventDefault()
+//
+//     let user = {
+//         name: document.getElementById('formUserName').value,
+//         surname: document.getElementById('formUserSurname').value,
+//         age: document.getElementById('formUserAge').value
+//     };
+//
+//     let userDataBlock = document.createElement('div');
+//     userDataBlock.id = 'userDataBlock';
+//
+//     userDataBlock.innerHTML = `
+//         <p>Name: ${user.name || 'None'}</p>
+//         <p>Surname: ${user.surname || 'None'}</p>
+//         <p>Age: ${user.age || 'None'}</p>
+//     `;
+//
+//     document.body.appendChild(userDataBlock);
+// }
