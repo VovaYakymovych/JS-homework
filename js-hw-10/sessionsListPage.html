@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Session tracker</title>
+</head>
+<body>
+
+<ul id = 'sessionsList'></ul>
+
+<script>
+
+  let sessionsList = JSON.parse(localStorage.getItem('sessionList')) || [];
+  let listContainer = document.getElementById('sessionsList');
+
+
+  if (sessionsList.length === 0) {
+    listContainer.innerHTML = "<p>No visits</p>";
+  } else {
+    sessionsList.forEach(visit => {
+      let listItem = document.createElement('li');
+      listItem.textContent = `Page visited on: ${visit.date}`;
+      listContainer.appendChild(listItem);
+    });
+  }
+
+</script>
+</body>
+</html>
+

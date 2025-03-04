@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>timer</title>
+
+  <style>
+    #priceBlock {
+      height: 100px;
+      width: 250px;
+      margin: 0 auto;
+
+      background-color: #5e9a9c;
+      border: none;
+      border-radius: 15px;
+      font-size: 1.5rem;
+      color: aliceblue;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+
+</head>
+<body>
+
+<div id="priceBlock">100 грн</div>
+
+<script>
+
+  let currentTime = Date.now()
+
+  let savedPrice = localStorage.getItem('price') ? parseInt(localStorage.getItem('price')) : 100
+
+  let lastUpdateTime = localStorage.getItem('lastUpdate') ? parseInt(localStorage.getItem('lastUpdate')) : 0
+
+  if (currentTime - lastUpdateTime >= 10000) {
+    savedPrice += 10
+    localStorage.setItem('price', savedPrice)
+    localStorage.setItem('lastUpdate', currentTime)
+  }
+
+  document.getElementById('priceBlock').innerText = savedPrice + ' грн'
+
+</script>
+
+</body>
+</html>
+

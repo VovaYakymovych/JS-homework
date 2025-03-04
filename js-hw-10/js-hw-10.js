@@ -1,4 +1,3 @@
-
 // ==================================task #sH8c4er======================================
 
 
@@ -69,7 +68,7 @@
 // formUser.append(userName, userSurname, userAge, formUserButton)
 // document.body.appendChild(formUser)
 //
-// formUser.id = 'formUser'
+// formUser.classList.add('form-style-preset')
 // userName.id = 'formUserName'
 // userSurname.id = 'formUserSurname'
 // userAge.id = 'formUserAge'
@@ -105,3 +104,180 @@
 //
 //   document.body.appendChild(userDataBlock);
 // }
+
+
+// ==================================task #2VaLt4vDczH======================================
+
+
+// let counterDiv = document.createElement('div')
+// counterDiv.id = 'counter'
+// document.body.appendChild(counterDiv)
+//
+// let counter = localStorage.getItem('pageCounter') ? parseInt(localStorage.getItem('pageCounter')) : 0
+//
+// counter++
+//
+// localStorage.setItem('pageCounter', counter)
+// document.getElementById('counter').innerText = counter
+
+
+// ==================================task #LhSfdhM3======================================
+
+// let sessionList = JSON.parse(localStorage.getItem('sessionList'))||[]
+// let visit = {date:new Date().toLocaleString()}
+//
+// sessionList.push(visit)
+// localStorage.setItem('sessionList', JSON.stringify(sessionList))
+
+
+// ==================================task #Jg0gPO00======================================
+
+
+// let kgInput = document.createElement('input')
+// let resultOutput = document.createElement('div')
+//
+// kgInput.id = 'kgInput'
+// kgInput.classList.add('formInput')
+// kgInput.placeholder = 'Enter kg amount'
+//
+// resultOutput.id = 'result'
+//
+// kgInput.addEventListener('input',function (){
+//   let kg = parseFloat(kgInput.value);
+//
+//   let pounds = kg * 2.20462;
+//   resultOutput.textContent = `Weight in pounds: ${pounds.toFixed(2)}`;
+// })
+//
+// document.body.append(kgInput,resultOutput)
+
+
+// ==================================task #RbQGnH5DuC======================================
+
+
+// let addToLocalStorage = function (arrayName, objToAdd) {
+//
+//   let arr = JSON.parse(localStorage.getItem(arrayName)) || [];
+//   arr.push(objToAdd)
+//
+//   localStorage.setItem(arrayName, JSON.stringify(arr))
+// }
+//
+// addToLocalStorage('list1', {name: 'vasya', age: 31})
+
+
+// ==================================task #kUSgFqWY======================================
+
+// let tableForm = document.createElement('form')
+// let rowInput = document.createElement('input')
+// let columnInput = document.createElement('input')
+// let infoInput = document.createElement('input')
+// let tableFormButton = document.createElement('button')
+// let tableContainer = document.createElement('div')
+//
+// tableForm.append(rowInput, columnInput, infoInput, tableFormButton)
+// document.body.append(tableForm, tableContainer)
+//
+// tableForm.classList.add('form-style-preset')
+// tableFormButton.classList.add('formButton')
+//
+// document.querySelectorAll("input").forEach(input => {
+//   input.classList.add("formInput")
+// })
+//
+// tableForm.id = 'tableForm'
+// rowInput.id = 'rowInput'
+// columnInput.id = 'columnInput'
+// infoInput.id = 'infoInput'
+//
+// rowInput.type ='number'
+// columnInput.type ='number'
+//
+// rowInput.placeholder = 'Enter amount of rows'
+// columnInput.placeholder = 'Enter amount of columns'
+// infoInput.placeholder = 'Enter info to display in table'
+// tableFormButton.innerText = 'Submit'
+//
+// tableForm.onsubmit = function (ev) {
+//   ev.preventDefault()
+//
+//   let rows = parseInt(rowInput.value)
+//   let columns = parseInt(columnInput.value)
+//   let info = infoInput.value
+//
+//   tableContainer.innerHTML = ""
+//
+//   tableContainer.style.display = "grid"
+//   tableContainer.style.gridTemplateColumns = `repeat(${columns}, 100px)`
+//
+//   for (let i = 0; i < rows * columns; i++) {
+//     let cell = document.createElement('div')
+//     cell.classList.add('cell')
+//     cell.innerText = info
+//     tableContainer.appendChild(cell)
+//   }
+// }
+
+
+// ==================================task #kUSgFqWY======================================
+
+// let container = document.createElement('div')
+// let buttonsWrap = document.createElement('div')
+// let prevButton = document.createElement('button')
+// let nextButton = document.createElement('button')
+//
+// container.id = 'container'
+// buttonsWrap.classList.add('buttons')
+// prevButton.id = 'prev'
+// nextButton.id = 'next'
+//
+// prevButton.innerText = 'Prev'
+// nextButton.innerText = 'Next'
+//
+// buttonsWrap.append(prevButton, nextButton)
+// document.body.append(container, buttonsWrap)
+//
+//
+// let items = []
+// for (let i = 1; i <= 100; i++) {
+//   items.push({ id: i, name: "Item " + i })
+// }
+//
+// let currentPage = 0
+// let itemsPerPage = 10
+//
+// function renderItems() {
+//   container.innerHTML = ""
+//
+//   let start = currentPage * itemsPerPage
+//   let end = start + itemsPerPage
+//   let pageItems = items.slice(start, end)
+//
+//   pageItems.forEach(item => {
+//     let div = document.createElement('div')
+//     div.classList.add('item')
+//     div.innerText = `${item.id}: ${item.name}`
+//     container.appendChild(div)
+//   })
+//
+//   prevButton.disabled = currentPage === 0
+//   nextButton.disabled = end >= items.length
+// }
+//
+// prevButton.onclick = function () {
+//   if (currentPage > 0) {
+//     currentPage--
+//     renderItems()
+//   }
+// }
+//
+// nextButton.onclick = function () {
+//   if ((currentPage + 1) * itemsPerPage < items.length) {
+//     currentPage++
+//     renderItems()
+//   }
+// }
+//
+//
+// renderItems()
+
